@@ -1,17 +1,13 @@
-abstract class Shape {
-    private int sides;
+abstract class Shape { //abstract base class, it is not instantiated directly.
+    private int sides; //to define the number of sides in a shape.
 
-    public int getSides() {
+    public int getSides() { //gets and returns the number of sides within the shape.
         return sides;
     }
 
-    public void setSides(int sides) {
-        this.sides = sides;
-    }
+    abstract public int getArea(); //abstract method to get area of the shape.
 
-    abstract public int getArea();
-
-    Shape(int sides) {
+    Shape(int sides) { //set sides directly to the constructor.
         this.sides = sides;
     }
 }
